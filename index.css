@@ -1,33 +1,62 @@
-.navbar button img{
- width: 100%;
- overflow: hidden;
- border-radius: inherit;
+.navbar button img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .navbar button {
- border-radius: 50px;
- width: 60px;
- height: 60px;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 .navbar button:first-of-type {
- border-radius: 50px;
- width: 50px;
- height: 50px;
- font-size: 20px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
 }
 
-.ball_not{
+#btn__coll {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #754ffe;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.ball_not {
   width: 12px;
- height: 12px;
- border-radius: 50px;
- border: 2px solid white;
+  height: 12px;
+  border-radius: 50px;
+  border: 2px solid white;
 }
 
-.jumbotron{
- background-color: #754FFE;
+.jumbotron {
+  background-color: #754ffe;
 }
 
-.ball_not:first-of-type {
- background-color: #754FFE!important;
+#icon_button {
+  background-color: #754ffe !important;
+}
+
+#jumbo_bott_list .icon {
+  background-color: rgb(243, 228, 207);
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+}
+
+.par_type_a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.par_type_b {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3);
+  /* color: lightgray; */
 }
