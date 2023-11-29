@@ -8,7 +8,8 @@ const courses = [
         prezzo: 29.99,
         nome: "Nome 1",
         cognome: "Cognome 1",
-        img_prof: "avatar-1"
+        img_prof: "avatar-1",
+	most_popular: false,
     },
     {
         url_img: "course-css",
@@ -19,7 +20,8 @@ const courses = [
         prezzo: 19.99,
         nome: "Nome 2",
         cognome: "Cognome 2",
-        img_prof: "avatar-2"
+        img_prof: "avatar-2",
+	most_popular: false,
     },
     {
         url_img: "course-gatsby",
@@ -30,7 +32,8 @@ const courses = [
         prezzo: 24.99,
         nome: "Nome 3",
         cognome: "Cognome 3",
-        img_prof: "avatar-3"
+        img_prof: "avatar-3",
+	most_popular: true,
     },
     {
         url_img: "course-graphql",
@@ -41,7 +44,8 @@ const courses = [
         prezzo: 34.99,
         nome: "Nome 4",
         cognome: "Cognome 4",
-        img_prof: "avatar-4"
+        img_prof: "avatar-4",
+	most_popular: false,
     },
     {
         url_img: "course-html",
@@ -52,7 +56,8 @@ const courses = [
         prezzo: 19.99,
         nome: "Nome 5",
         cognome: "Cognome 5",
-        img_prof: "avatar-5"
+        img_prof: "avatar-5",
+	most_popular: true,
     },
     {
         url_img: "course-javascript",
@@ -63,7 +68,8 @@ const courses = [
         prezzo: 34.99,
         nome: "Nome 6",
         cognome: "Cognome 6",
-        img_prof: "avatar-6"
+        img_prof: "avatar-6",
+	most_popular: true,
     },
     {
         url_img: "course-laravel",
@@ -74,7 +80,8 @@ const courses = [
         prezzo: 22.99,
         nome: "Nome 7",
         cognome: "Cognome 7",
-        img_prof: "avatar-7"
+        img_prof: "avatar-7",
+	most_popular: false,
     },
     {
         url_img: "course-node",
@@ -85,7 +92,8 @@ const courses = [
         prezzo: 39.99,
         nome: "Nome 8",
         cognome: "Cognome 8",
-        img_prof: "avatar-8"
+        img_prof: "avatar-8",
+	most_popular: false,
     },
     {
         url_img: "course-python",
@@ -96,7 +104,8 @@ const courses = [
         prezzo: 27.99,
         nome: "Nome 9",
         cognome: "Cognome 9",
-        img_prof: "avatar-2"
+        img_prof: "avatar-2",
+	most_popular: false,
     }
 ];
 
@@ -157,6 +166,73 @@ ${courses[i].prezzo} ${courses[i].prezzo+200}
 carosel__item.innerHTML += `<div class='row gx-2 justify-content-center'>${html__item}</div>`;
 
 }
+
+
+const most_popular = [];
+for(let i=0; i<courses.length; i++){
+ if(courses[i].most_popular)
+  most_popular.push(courses[i]);
+}
+
+const caroselPopular = document.querySelector("#carouselPopular .carousel-inner");
+
+const end_forPop = most_popular.length%4 === 0 ? Math.floor(most_popular.length/4) : Math.floor(most_popular.length/4)+1;
+
+for(let x=0; x<end_forPop; x++){    
+
+const offsetPop = (x===end_forPop-1 ? most_popular.length%4 : 4);
+
+let html__itempop="";
+let contpop=0;
+for(let i=x*4; i<x*4+offsetPop; i++){
+ contpop++;
+ html__itempop += `
+ <div class="col-6 col-md-4 col-lg-3
+${contpop===3 ? "d-none d-md-block" : ""}
+${contpop===4 ? "d-none d-lg-block" : ""}
+">
+  <div class="card" >
+   <img src="./assets/${most_popular[i].url_img}.jpg" class="card-img-top" alt="...">
+   <div class="card-body">
+    <h5 class="card-title">${most_popular[i].titolo}</h5>
+    <p class="card-text d-flex align-items-center justify-content-between">
+<ion-icon name="time-outline"></ion-icon>
+${most_popular[i].durata} 
+<ion-icon name="cellular-outline"></ion-icon>
+${most_popular[i].livello}
+    </p>
+    <p class="card-text d-flex align-items-center justify-content-between">
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+<ion-icon name="star-outline"></ion-icon>
+${most_popular[i].media_voti} (1,600)
+    </p>
+    <p class="card-text">
+${most_popular[i].prezzo} ${most_popular[i].prezzo+200}
+    </p>
+   </div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item d-flex align-items-center justify-content-between">
+     <div>            <button class="btn w-10 p-0">
+              <img src="./assets/${most_popular[i].img_prof}.jpg" />
+            </button> ${most_popular[i].nome} ${most_popular[i].cognome}
+     </div>  <ion-icon name="bookmark-outline"></ion-icon>
+    </li>
+  </ul>
+  </div>
+ </div>
+
+`; 
+}
+caroselPopular.innerHTML += `<div  class="carousel-item ${x===0 ? 'active' : ''}"><div class='row gx-2 justify-content-center'>${html__itempop}</div></div>
+`;
+
+}
+
+
+
 
 const ciao = function(){
 
