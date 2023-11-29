@@ -14,7 +14,6 @@
     <link rel="icon" type="image/png" href="./assets/logo.svg" />
   </head>
   <body class="">
-
     <nav class="navbar navbar-expand-lg bg-body-light">
       <div class="container-fluid">
         <img src="./assets/logo.svg" />
@@ -108,7 +107,11 @@
               ></div>
               <ion-icon name="notifications-outline"></ion-icon>
             </button>
-            <button class="btn w-10 p-0 position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button
+              class="btn w-10 p-0 position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
               <div
                 class="bg-success position-absolute top-50 end-0 ball_not"
               ></div>
@@ -131,38 +134,61 @@
       </div>
     </nav>
 
-<!-- Modal -->
-<div class="modal modal-sm fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-       <div class="d-flex align-items-center gap-4">
-	            <button class="btn_user btn w-10 p-0 position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <div
-                class="bg-success position-absolute top-50 end-0 ball_not"
-              ></div>
-              <img class="" src="./assets/avatar-1.jpg" />
-            </button>
+    <!-- Modal -->
+    <div
+      class="modal modal-sm fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-4">
+              <button
+                class="btn_user btn w-10 p-0 position-relative"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <div
+                  class="bg-success position-absolute top-50 end-0 ball_not"
+                ></div>
+                <img class="" src="./assets/avatar-1.jpg" />
+              </button>
 
-          <div>
-            <div class="text-nowrap par_type_a">Name Surname</div>
-            <div class="text-nowrap par_type_b">
-              email@address
+              <div>
+                <div class="text-nowrap par_type_a">Name Surname</div>
+                <div class="text-nowrap par_type_b">email@address</div>
+              </div>
             </div>
           </div>
-	</div>
-      </div>
-      <div class="p-3 modal-body">
-        <div class="py-2 d-flex align-items-center gap-3 fw-bold"><ion-icon name="person-outline"></ion-icon> Profile</div>
-	<div class="py-2 d-flex align-items-center gap-3 fw-bold"><ion-icon name="star-outline"></ion-icon> Subscription</div>
-	<div class="py-2 d-flex align-items-center gap-3 fw-bold"><ion-icon name="settings-outline"></ion-icon> Settings</div>
-      </div>
-      <div class="p-3 modal-footer justify-content-start align-items-center gap-3 fw-bold">
-        <button type="button" class="btn m-0 p-0 pt-1" data-bs-dismiss="modal"><ion-icon name="log-out-outline"></ion-icon></button> Sign Out
+          <div class="p-3 modal-body">
+            <div class="py-2 d-flex align-items-center gap-3 fw-bold">
+              <ion-icon name="person-outline"></ion-icon> Profile
+            </div>
+            <div class="py-2 d-flex align-items-center gap-3 fw-bold">
+              <ion-icon name="star-outline"></ion-icon> Subscription
+            </div>
+            <div class="py-2 d-flex align-items-center gap-3 fw-bold">
+              <ion-icon name="settings-outline"></ion-icon> Settings
+            </div>
+          </div>
+          <div
+            class="p-3 modal-footer justify-content-start align-items-center gap-3 fw-bold"
+          >
+            <button
+              type="button"
+              class="btn m-0 p-0 pt-1"
+              data-bs-dismiss="modal"
+            >
+              <ion-icon name="log-out-outline"></ion-icon>
+            </button>
+            Sign Out
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <div
       class="m-0 row jumbotron text-light justify-content-center align-items-center px-5"
@@ -231,68 +257,113 @@
       </div>
     </div>
 
-<div class=" px-5 my-3 bg-body-tertiary">
- <h2 class="mb-3 pt-5">Recommended to you</h2>
+    <div class="px-5 my-3 bg-body-tertiary">
+      <h2 class="mb-3 pt-5">Recommended to you</h2>
 
- <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-  </div>
-   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-   </button>
-   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-   </button>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span
+            class="bg-secondary carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span
+            class="bg-secondary carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
- </div>
+      <h2 class="mb-3 mt-5 pt-5">Most Popular</h2>
 
- <h2 class="mb-3 mt-5 pt-5">Most Popular</h2>
+      <div id="carouselPopular" class="carousel slide">
+        <div class="carousel-inner"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselPopular"
+          data-bs-slide="prev"
+        >
+          <span
+            class="bg-secondary carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselPopular"
+          data-bs-slide="next"
+        >
+          <span
+            class="bg-secondary carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
- <div id="carouselPopular" class="carousel slide">
-  <div class="carousel-inner">
-  </div>
-   <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopular" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-   </button>
-   <button class="carousel-control-next" type="button" data-bs-target="#carouselPopular" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-   </button>
+      <h2 class="mb-3 mt-5 pt-5">Trending</h2>
 
- </div>
+      <div id="carouselTrend" class="carousel slide">
+        <div class="carousel-inner"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselTrend"
+          data-bs-slide="prev"
+        >
+          <span
+            class="bg-secondary carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselTrend"
+          data-bs-slide="next"
+        >
+          <span
+            class="bg-secondary carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
- <h2 class="mb-3 mt-5 pt-5">Trending</h2>
-
- <div id="carouselTrend" class="carousel slide">
-  <div class="carousel-inner">
-  </div>
-   <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrend" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-   </button>
-   <button class="carousel-control-next" type="button" data-bs-target="#carouselTrend" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-   </button>
-
- </div>
-
-  <div class="mt-5 pt-5">
-    <div class="row">
-      <div class="col-lg-12">
-        <footer class="py-3 d-block d-md-flex justify-content-between" >
-          <div class="">© 2022 Geeks - All right reserved</div>
-          <div class="d-flex gap-3"><p>Privacy</p><p>Terms</p><p>Feedback</p><p>Support</p></div>
-        </footer>
+      <div class="mt-5 pt-5">
+        <div class="row">
+          <div class="col-lg-12">
+            <footer class="py-3 d-block d-md-flex justify-content-between">
+              <div class="">© 2022 Geeks - All right reserved</div>
+              <div class="d-flex gap-3">
+                <p>Privacy</p>
+                <p>Terms</p>
+                <p>Feedback</p>
+                <p>Support</p>
+              </div>
+            </footer>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

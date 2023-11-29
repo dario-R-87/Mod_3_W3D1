@@ -61,19 +61,19 @@
   /* color: lightgray; */
 }
 
-.list-group .list-group-item img{
+.list-group .list-group-item img {
   width: 100%;
   overflow: hidden;
   border-radius: 50px;
 }
 
-.list-group .list-group-item button{
+.list-group .list-group-item button {
   width: 30px;
   height: 30px;
   border-radius: 50px;
 }
 
-.btn_user{
+.btn_user {
   border-radius: 50px;
   width: 60px;
   height: 60px;
@@ -85,19 +85,29 @@
   border-radius: inherit;
 }
 
-#exampleModal .modal-dialog{
-position: absolute;
-top: 5%;
-right: 5%;
+#exampleModal .modal-dialog {
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
 
-.price_not{
- font-size: 14px;
- color: rgba(0, 0, 0, 0.3);
+.price_not {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.vote_br{
- color: rgba(0, 0, 0, 0.3);
+.vote_br {
+  color: rgba(0, 0, 0, 0.3);
 
- font-size: 14px;
+  font-size: 14px;
+}
+
+.stars {
+  font-size: 16px;
+  color: orange;
+  font-weight: bold;
+}
+
+.font_name {
+  font-size: 14px;
 }
