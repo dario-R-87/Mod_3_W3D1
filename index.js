@@ -105,12 +105,14 @@ const carosel = document.querySelector("#carouselExample .carousel-inner");
 const end_for = courses.length%4 === 0 ? Math.round(courses.length/4) : Math.round(courses.length/4)+1;
 
 for(let x=0; x<end_for; x++){    
-carosel.innerHTML += `<div id="item_${x}" class="carousel-item ${x===0 ? 'active' : ''} d-flex gap-3 justify-content-between"></div>`;
+carosel.innerHTML += `<div id="item_${x}" class="carousel-item ${x===0 ? 'active' : ''}"></div>`;
 const carosel__item = document.querySelector(`#carouselExample .carousel-inner #item_${x}`);
 
 const offset = (x===end_for-1 ? courses.length%4 : 4);
+
+let html__item="";
 for(let i=x*4; i<x*4+offset; i++){
- carosel__item.innerHTML += `
+ html__item += `
  <div class="col-6 col-md-4 col-lg-3">
   <div class="card" >
    <img src="./assets/${courses[i].url_img}.jpg" class="card-img-top" alt="...">
@@ -145,8 +147,10 @@ ${courses[i].prezzo} ${courses[i].prezzo+200}
   </div>
  </div>
 
-</div>`;
-}
+`; 
+}console.log(html__item.length);
+carosel__item.innerHTML += `<div class='row gx-2 justify-content-center'>${html__item}</div>`;
+
 }
 
 const ciao = function(){
