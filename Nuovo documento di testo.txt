@@ -1,0 +1,4 @@
+ciao
+ mi puoi creare un array  in javascript di 4 elementi che contiene oggetti che hanno le seguenti proprietà?:
+
+url_img stringa, titolo stringa, durata intero, livello stringa,  media_voti float, prezzo float, nome srtinga, cognome stringa, img_prof stringa
