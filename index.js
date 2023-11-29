@@ -111,9 +111,14 @@ const carosel__item = document.querySelector(`#carouselExample .carousel-inner #
 const offset = (x===end_for-1 ? courses.length%4 : 4);
 
 let html__item="";
+let cont=0;
 for(let i=x*4; i<x*4+offset; i++){
+ cont++;
  html__item += `
- <div class="col-6 col-md-4 col-lg-3">
+ <div class="col-6 col-md-4 col-lg-3
+${cont===3 ? "d-none d-md-block" : ""}
+${cont===4 ? "d-none d-lg-block" : ""}
+">
   <div class="card" >
    <img src="./assets/${courses[i].url_img}.jpg" class="card-img-top" alt="...">
    <div class="card-body">
@@ -148,7 +153,7 @@ ${courses[i].prezzo} ${courses[i].prezzo+200}
  </div>
 
 `; 
-}console.log(html__item.length);
+}
 carosel__item.innerHTML += `<div class='row gx-2 justify-content-center'>${html__item}</div>`;
 
 }
@@ -157,5 +162,5 @@ const ciao = function(){
 
 };
 
-const user = document.querySelector("#btn_user");
+const user = document.querySelector(".btn_user");
 user.onclick = ciao;

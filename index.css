@@ -73,3 +73,14 @@
   border-radius: 50px;
 }
 
+.btn_user{
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+}
+
+.btn_user img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
