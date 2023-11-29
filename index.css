@@ -84,3 +84,9 @@
   overflow: hidden;
   border-radius: inherit;
 }
+
+#exampleModal .modal-dialog{
+position: absolute;
+top: 5%;
+right: 5%;
+}
