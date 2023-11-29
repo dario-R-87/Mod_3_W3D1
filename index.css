@@ -60,3 +60,16 @@
   color: rgba(0, 0, 0, 0.3);
   /* color: lightgray; */
 }
+
+.list-group .list-group-item img{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.list-group .list-group-item button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
