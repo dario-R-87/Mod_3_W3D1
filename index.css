@@ -90,3 +90,14 @@ position: absolute;
 top: 5%;
 right: 5%;
 }
+
+.price_not{
+ font-size: 14px;
+ color: rgba(0, 0, 0, 0.3);
+}
+
+.vote_br{
+ color: rgba(0, 0, 0, 0.3);
+
+ font-size: 14px;
+}

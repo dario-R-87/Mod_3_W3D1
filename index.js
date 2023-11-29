@@ -148,16 +148,23 @@ ${courses[i].durata}
 <ion-icon name="cellular-outline"></ion-icon>
 ${courses[i].livello}
     </p>
-    <p class="card-text d-flex align-items-center justify-content-between">
+    <p class="card-text d-flex align-items-center">
+<div>
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
-${courses[i].media_voti} (1,600)
-    </p>
+</div>
+<div>
+${courses[i].media_voti}
+</div>
+<div>
+<span class="vote_br">(${(1+Math.random()*20).toFixed(3)})</span>
+</div>
+</p>
     <p class="card-text">
-${courses[i].prezzo} ${courses[i].prezzo+200}
+<span class="fw-bold">${courses[i].prezzo.toFixed(2)}</span> <span class="price_not fw-bold text-decoration-line-through">${(courses[i].prezzo+20).toFixed(2)}</span>
     </p>
    </div>
    <ul class="list-group list-group-flush">
@@ -216,10 +223,10 @@ ${most_popular[i].livello}
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
-${most_popular[i].media_voti} (1,600)
+${most_popular[i].media_voti}(${(1+Math.random()*20).toFixed(3)})
     </p>
     <p class="card-text">
-${most_popular[i].prezzo} ${most_popular[i].prezzo+200}
+<span class="fw-bold">${most_popular[i].prezzo.toFixed(2)}</span> <span class="price_not fw-bold text-decoration-line-through">${(most_popular[i].prezzo+20).toFixed(2)}</span>
     </p>
    </div>
    <ul class="list-group list-group-flush">
@@ -278,10 +285,10 @@ ${trend[i].livello}
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
 <ion-icon name="star-outline"></ion-icon>
-${trend[i].media_voti} (1,600)
+${trend[i].media_voti} (${(1+Math.random()*20).toFixed(3)})
     </p>
     <p class="card-text">
-${trend[i].prezzo} ${trend[i].prezzo+200}
+<span class="fw-bold">${trend[i].prezzo.toFixed(2)}</span> <span class="price_not fw-bold text-decoration-line-through">${(trend[i].prezzo+20).toFixed(2)}</span>
     </p>
    </div>
    <ul class="list-group list-group-flush">
