@@ -141,7 +141,7 @@ for (let x = 0; x < end_for; x++) {
   for (let i = x * 4; i < x * 4 + offset; i++) {
     cont++;
     html__item += `
- <div class="col-6 col-md-4 col-lg-3
+ <div class="card__wrapper col-6 col-md-4 col-lg-3
 ${cont === 3 ? "d-none d-md-block" : ""}
 ${cont === 4 ? "d-none d-lg-block" : ""}
 ">
@@ -185,7 +185,8 @@ ${courses[i].media_voti}
             </button> <span class="font_name">${courses[i].nome} ${
       courses[i].cognome
     }</span>
-     </div>  <ion-icon name="bookmark-outline"></ion-icon>
+     </div>  <div><ion-icon name="bookmark-outline"></ion-icon>
+             <ion-icon name="bookmark"></ion-icon></div> 
     </li>
   </ul>
   </div>
@@ -262,7 +263,8 @@ ${most_popular[i].livello}</div>
      <div>            <button class="btn w-10 p-0">
               <img src="./assets/${most_popular[i].img_prof}.jpg" />
             </button> ${most_popular[i].nome} ${most_popular[i].cognome}
-     </div>  <ion-icon name="bookmark-outline"></ion-icon>
+     </div>  <div><ion-icon name="bookmark-outline"></ion-icon>
+     <ion-icon name="bookmark"></ion-icon></div> 
     </li>
   </ul>
   </div>
@@ -339,7 +341,8 @@ ${trend[i].livello}</div>
      <div>            <button class="btn w-10 p-0">
               <img src="./assets/${trend[i].img_prof}.jpg" />
             </button> ${trend[i].nome} ${trend[i].cognome}
-     </div>  <ion-icon name="bookmark-outline"></ion-icon>
+     </div>  <div><ion-icon name="bookmark-outline"></ion-icon>
+     <ion-icon name="bookmark"></ion-icon></div> 
     </li>
   </ul>
   </div>
